@@ -30,6 +30,14 @@ internal static class day01
             result += distance;
         }
 
-        Console.WriteLine(result);
+        var resultPart2 = 0;
+        for (var i = 0; i < list1.Count; i++)
+        {
+            var countInList2 = list2.Count(x => x == list1[i]);
+            resultPart2 += (countInList2 * list1[i]);
+        }
+
+
+        Console.WriteLine($"{result} - {resultPart2}");
     }
 }
